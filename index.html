@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +9,8 @@
 
     <style>
 
-
         body{
             font-family: Arial, sans-serif;
-
 
         }
 
@@ -20,10 +18,10 @@
             padding: 3px 3px ;
             color: #000000;
             display: flex;
-            justify-content:left;
+            justify-content:center;
             align-items:center;
             flex-direction: column;
-            max-width: 95%;
+            max-width: 80%;
             margin: auto;
             border: 2px solid #000000;
             border-radius: 30px;
@@ -59,9 +57,6 @@
             display: inline-block;
         }
 
-     
-
-
 
 
     </style>
@@ -69,18 +64,18 @@
 <body>
 
 
-
-
 <div class="container>">
     <div class="widget">
 
-            <div class="greet" id="greet"></div>
-
-                <div class="date" id="date"></div>
-                <div class="clock">
+        <div class="clock" id="clock">
                     <div class="time" id="hour"></div>
                     <div class="colon">:</div>
                     <div class="time" id="min"></div>
+            
+            <div class="greet"></div>
+
+            <div class="date" id="date"></div>
+                
                 </div>
            
     </div>
@@ -95,7 +90,7 @@ function dispalyGreetings(today){
         hrs = today.getHours();
         name=""
         if (hrs < 12)
-            greet = 'Bom Dia  '+name;
+            greet = 'Bom Dia!  '+name;
         else if (hrs >= 06 && hrs <= 18)
             greet = 'Boa Tarde '+name;
         else if (hrs >= 18 && hrs <= 06)
